@@ -24,7 +24,7 @@ init()
 
 print_help()
 {
-    echo "Usage: ./deploy.sh [OPTIONS]"
+    echo "Usage: ./gscript.sh -d [OPTIONS]"
     echo "Options:"
     echo "-i, --init"
     echo "-s,   --stage"
