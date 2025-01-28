@@ -17,9 +17,9 @@ init()
     echo -e $PROD_CONFIG_TEMPLATE |\
     jq '.' -r > $CONFIG_DIR/prod.json
 
-    echo -e "exports.helloWorld = async (request, response) => {\n\tresponse.status(200).send({\n\t\t\"message\": \"Hello World!\"\n\t});\n}" > index.js
+    echo -e "'use strict'\nexports.helloWorld = async (request, response) => {\n\tresponse.status(200).send({\n\t\t\"message\": \"Hello World!\"\n\t});\n}" > index.js
 
-    npm init && npm install
+    npm init --yes && npm install
 }
 
 print_help()
